@@ -4,8 +4,8 @@
 ua-device-type
 ==============
 
-user agent based device type sniffer tablet||mobile||desktop||tv
-based and almost wholely the matching code from the npm package express-device by rguerreiro
+User agent based device type sniffer tablet||mobile||desktop||tv.
+Based almost wholely on the matching code from the npm package express-device by rguerreiro
 
 example
 =======
@@ -40,13 +40,13 @@ optional options
 options is an object
 
 - emptyUserAgentDeviceType
-  if no user agent is passed or the user agent is empty this option will be returned.
+  - if no user agent is passed or the user agent is empty this option will be returned.
   - defaults to "desktop"
 - unknownUserAgentDeviceType
-  instead of "phone" if unknown the value if this option will be returned
+  - instead of "phone" if unknown the value if this option will be returned
   - defaults to "phone"
 - botUserAgentDeviceType
-  instead of "bot" the value of this option will be returned.
+  - instead of "bot" the value of this option will be returned.
 
 
 thanks
