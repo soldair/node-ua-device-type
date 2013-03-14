@@ -23,15 +23,30 @@ deviceType('Mozilla/5.0 (Linux; Android 4.1.1; Nexus 7 Build/JRO03S) AppleWebKit
 api
 ===
 
-deviceType(user agent string)
+deviceType(user agent string, [optional options])
 
 return values
 -------------
 String
 
 - "tablet"
-- "mobile"
-- "default"
+- "phone"
+- "tv"
+- "desktop"
+
+optional options
+----------------
+
+options is an object
+
+- emptyUserAgentDeviceType
+  if no user agent is passed or the user agent is empty this option will be returned.
+  - defaults to "desktop"
+- unknownUserAgentDeviceType
+  instead of "phone" if unknown the value if this option will be returned
+  - defaults to "phone"
+- botUserAgentDeviceType
+  instead of "bot" the value of this option will be returned.
 
 
 thanks

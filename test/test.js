@@ -1,5 +1,5 @@
 var test = require('tap').test
-var deviceType = require('../other.js');
+var deviceType = require('../index.js');
 
 var mobile = [
   "Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03O) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19"
@@ -22,7 +22,7 @@ test("can detect tablets",function(t){
 
 test("can detect mobile devices",function(t){
   mobile.forEach(function(ua){
-    t.equals(deviceType(ua),"mobile",ua+" should be mobile");
+    t.equals(deviceType(ua),"phone",ua+" should be phone");
   });
   t.end();
 });

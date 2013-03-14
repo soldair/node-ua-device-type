@@ -26,7 +26,7 @@ module.exports = function(ua,options){
 
   if (!ua || ua === '') {
     // No user agent.
-    return self.options.emptyUserAgentDeviceType;
+    return options.emptyUserAgentDeviceType||devices.desktop;
   }
 
   if (ua.match(/GoogleTV|SmartTV|Internet TV|NetCast|NETTV|AppleTV|boxee|Kylo|Roku|DLNADOC|CE\-HTML/i)) {
@@ -70,10 +70,10 @@ module.exports = function(ua,options){
     return devices.desktop;
   } else if (ua.match(/curl|Bot|B-O-T|Crawler|Spider|Spyder|Yahoo|ia_archiver|Covario-IDS|findlinks|DataparkSearch|larbin|Mediapartners-Google|NG-Search|Snappy|Teoma|Jeeves|Charlotte|NewsGator|TinEye|Cerberian|SearchSight|Zao|Scrubby|Qseero|PycURL|Pompos|oegp|SBIder|yoogliFetchAgent|yacy|webcollage|VYU2|voyager|updated|truwoGPS|StackRambler|Sqworm|silk|semanticdiscovery|ScoutJet|Nymesis|NetResearchServer|MVAClient|mogimogi|Mnogosearch|Arachmo|Accoona|holmes|htdig|ichiro|webis|LinkWalker|lwp-trivial/i) && !ua.match(/mobile|Playstation/i)) {
     // if user agent is a BOT/Crawler/Spider
-    return devices.bot;
+    return options.botUserAgentDeviceType||devices.bot;
   } else {
     // Otherwise assume it is a mobile Device
-    return devices.phone;
+    return options.unknownUserAgentDeviceType||devices.phone;
   }
 }
 
