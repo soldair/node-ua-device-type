@@ -24,17 +24,17 @@ var devices = {
 module.exports = function(ua,options){
   options = options||{};        
 
-  if (!ua || ua === '') {
+  if (!ua || ua === '') {
     // No user agent.
     return options.emptyUserAgentDeviceType||devices.desktop;
-  }
+  }
 
   if (ua.match(/GoogleTV|SmartTV|Internet TV|NetCast|NETTV|AppleTV|boxee|Kylo|Roku|DLNADOC|CE\-HTML/i)) {
     // if user agent is a smart TV - http://goo.gl/FocDk
     return devices.tv;
   } else if (ua.match(/Xbox|PLAYSTATION 3|Wii/i)) {
     // if user agent is a TV Based Gaming Console
-    return evices.tv;
+    return devices.tv;
   } else if (ua.match(/iP(a|ro)d/i) || (ua.match(/tablet/i) && !ua.match(/RX-34/i)) || ua.match(/FOLIO/i)) {
     // if user agent is a Tablet
     return devices.tablet;
