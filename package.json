@@ -1,7 +1,7 @@
 {
   "name": "ua-device-type",
   "description": "user agent based device type sniffer tablet||phone||tv||desktop",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "url": "git://github.com/soldair/node-ua-device-type.git"
   },
@@ -13,5 +13,6 @@
   "dependencies": {},
   "devDependencies": {
     "tap": "~0.2.5"
-  }
+  },
+  "license": "MIT"
 }
